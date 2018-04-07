@@ -1,4 +1,4 @@
-#Thu Mar 22 11:10:20 CET 2018
+#Sat Apr 07 16:07:08 CEST 2018
 org.netbeans.swing.plaf.OpenIDE-Module-Deprecated=\u0000
 org.openide.explorer.OpenIDE-Module-Install=\u0000
 org.netbeans.api.io.OpenIDE-Module-Layer=\u0000
@@ -132,8 +132,8 @@ org.openide.util.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 org.netbeans.modules.autoupdate.services.OpenIDE-Module-Install=\u0000
 org.netbeans.core.startup.OpenIDE-Module-Layer=org/netbeans/core/startup/layer.xml
 org.openide.util.lookup.OpenIDE-Module-Deprecated=\u0000
-org.netbeans.api.templates.AutoUpdate-Show-In-Client=false
 org.openide.actions.AutoUpdate-Show-In-Client=false
+org.netbeans.api.templates.AutoUpdate-Show-In-Client=false
 org.netbeans.api.templates.OpenIDE-Module-Install=\u0000
 org.openide.loaders.OpenIDE-Module-Description=\u0000
 org.netbeans.api.annotations.common.OpenIDE-Module-Deprecated=\u0000
@@ -176,8 +176,8 @@ org.netbeans.swing.outline.OpenIDE-Module-Deprecated=\u0000
 org.openide.loaders.OpenIDE-Module-Install=\u0000
 org.netbeans.api.progress.nb.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 dk.sdu.mmmi.cbse.Common.OpenIDE-Module-Install=dk/sdu/mmmi/cbse/common/data/Installer.class
-dk.sdu.mmmi.cbse.SilentUpdate.AutoUpdate-Show-In-Client=\u0000
 org.openide.windows.AutoUpdate-Show-In-Client=false
+dk.sdu.mmmi.cbse.SilentUpdate.AutoUpdate-Show-In-Client=\u0000
 org.netbeans.core.windows.OpenIDE-Module-Install=\u0000
 org.netbeans.core.OpenIDE-Module-Install=\u0000
 org.netbeans.modules.queries.OpenIDE-Module-Hide-Classpath-Packages=\u0000
