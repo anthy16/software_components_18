@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1523097675934
+Build-Jdk: 1.8.0_101
+Built-By: AKT
+Bundle-Activator: dk.sdu.mmmi.cbse.osgicollision.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGiCollision
+Bundle-SymbolicName: dk.sdu.mmmi.cbse.OSGiCollision
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: dk.sdu.mmmi.cbse.common.asteroids;version="[1.0,2)",dk.s
+ du.mmmi.cbse.common.bullet;version="[1.0,2)",dk.sdu.mmmi.cbse.common.da
+ ta;version="[1.0,2)",dk.sdu.mmmi.cbse.common.data.entityparts;version="
+ [1.0,2)",dk.sdu.mmmi.cbse.common.enemy;version="[1.0,2)",dk.sdu.mmmi.cb
+ se.common.services;version="[1.0,2)",dk.sdu.mmmi.cbse.osgicommonplayer;
+ version="[1.0,2)",org.osgi.framework;version="[1.6,2)"
+Tool: Bnd-1.50.0
