@@ -21,3 +21,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /Assignment 5 - week 10/AsteroidNBModules/Enemy/target/
+/Assignment 5/AsteroidNBModules/application/target/
+/Assignment 4 - week 9/AsteroidNBModules/Common/target/
+/Assignment 4 - week 9/AsteroidNBModules/Core/target/
+/Assignment 4 - week 9/AsteroidNBModules/Player/target/
+/Assignment 4 - week 9/AsteroidNBModules/application/target/
+/Assignment 4 - week 9/AsteroidNBModules/branding/target/
