@@ -12,7 +12,6 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 public class AsteroidProcessor implements IEntityProcessingService {
 
-    
     private IAsteroidSplitter asteroidSplitter;
 
     @Override

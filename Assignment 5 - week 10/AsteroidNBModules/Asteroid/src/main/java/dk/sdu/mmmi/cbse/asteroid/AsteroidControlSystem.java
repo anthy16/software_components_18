@@ -14,7 +14,9 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
+import dk.sdu.mmmi.cbse.commonasteroid.IAsteroidSplitter;
 import java.util.Random;
+import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
 import org.openide.util.lookup.ServiceProviders;
 
@@ -31,6 +33,7 @@ import org.openide.util.lookup.ServiceProviders;
 public class AsteroidControlSystem implements IEntityProcessingService, IGamePluginService {
     
     private Entity asteroid;
+    private IAsteroidSplitter asteroidSplitter;
 
     @Override
     public void process(GameData gameData, World world) {
@@ -43,10 +46,16 @@ public class AsteroidControlSystem implements IEntityProcessingService, IGamePlu
             
             int numPoints = 12;
             movingPart.setUp(true);
-           
-         
+            
+            // Split event
+            asteroidSplitter = Lookup.getDefault().lookup(IAsteroidSplitter.class);
+            if (lifePart.isHit()) {
+                asteroidSplitter.createSplitAsteroid(asteroid, world);
+            }
+            
             movingPart.process(gameData, asteroid);
             positionPart.process(gameData, asteroid);
+            lifePart.process(gameData, asteroid);
             
             setShape(asteroid, numPoints);
         }
@@ -103,8 +112,10 @@ public class AsteroidControlSystem implements IEntityProcessingService, IGamePlu
         float radians = rdm.nextFloat();
         
         Entity asteroidEntity = new Asteroid();
+        asteroidEntity.setRadius(20);
         asteroidEntity.add(new MovingPart(deacceleration, acceleration, maxSpeed, rotationSpeed));
         asteroidEntity.add(new PositionPart(x, y, radians));
+        asteroidEntity.add(new LifePart(3));
         
         return asteroidEntity;
     }

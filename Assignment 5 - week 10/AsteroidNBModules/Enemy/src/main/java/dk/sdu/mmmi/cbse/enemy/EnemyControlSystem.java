@@ -9,13 +9,18 @@ import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.LEFT;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.RIGHT;
+import static dk.sdu.mmmi.cbse.common.data.GameKeys.SPACE;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.UP;
 import dk.sdu.mmmi.cbse.common.data.World;
+import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
+import dk.sdu.mmmi.cbse.commonbullet.BulletSPI;
+import dk.sdu.mmmi.cbse.commonenemy.Enemy;
 import java.util.Random;
+import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
 import org.openide.util.lookup.ServiceProviders;
 
@@ -30,6 +35,7 @@ import org.openide.util.lookup.ServiceProviders;
  * @author AKT
  */
 public class EnemyControlSystem implements IEntityProcessingService, IGamePluginService {
+    private BulletSPI bulletService;
     
     private Entity enemy;
     
@@ -39,25 +45,28 @@ public class EnemyControlSystem implements IEntityProcessingService, IGamePlugin
         for (Entity enemy : world.getEntities(Enemy.class)) {
             PositionPart positionPart = enemy.getPart(PositionPart.class);
             MovingPart movingPart = enemy.getPart(MovingPart.class);
-
-            movingPart.setLeft(this.getMovement());
-            movingPart.setRight(this.getMovement());
-            movingPart.setUp(this.getMovement());
+            LifePart lifePart = enemy.getPart(LifePart.class);
             
+            //Move and shoot
+            double random = Math.random();
+            movingPart.setLeft(random < 0.2);
+            movingPart.setRight(random > 0.3 && random < 0.5);
+            movingPart.setUp(random > 0.7 && random < 0.9);
+            
+            bulletService = Lookup.getDefault().lookup(BulletSPI.class);
+            if (random > 0.98) {
+                Entity bullet = bulletService.createBullet(enemy, gameData);
+                world.addEntity(bullet);
+            }
             
             movingPart.process(gameData, enemy);
             positionPart.process(gameData, enemy);
+            lifePart.process(gameData, enemy);
 
             updateShape(enemy);
         }
     }
     
-    private boolean getMovement() {
-        Random rdm = new Random();
-        
-        return rdm.nextBoolean();
-    }
-
     private void updateShape(Entity entity) {
         float[] shapex = entity.getShapeX();
         float[] shapey = entity.getShapeY();
@@ -101,8 +110,10 @@ public class EnemyControlSystem implements IEntityProcessingService, IGamePlugin
         float radians = 3.1415f / 2;
         
         Entity enemyShip = new Enemy();
+        enemyShip.setRadius(10);
         enemyShip.add(new MovingPart(deacceleration, acceleration, maxSpeed, rotationSpeed));
         enemyShip.add(new PositionPart(x, y, radians));
+        enemyShip.add(new LifePart(3));
         
         return enemyShip;
     }

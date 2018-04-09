@@ -68,6 +68,10 @@
         <module>Bullet</module>
         <module>CommonAsteroid</module>
         <module>CommonBullet</module>
+        <module>AsteroidSplitter</module>
+        <module>mavenproject1/Collision</module>
+        <module>CommonPlayer</module>
+        <module>CommonEnemy</module>
     </modules>
 
     <properties>
