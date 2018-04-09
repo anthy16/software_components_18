@@ -64,6 +64,10 @@
         <module>Core</module>
         <module>SilentUpdate</module>
         <module>Enemy</module>
+        <module>Asteroid</module>
+        <module>Bullet</module>
+        <module>CommonAsteroid</module>
+        <module>CommonBullet</module>
     </modules>
 
     <properties>

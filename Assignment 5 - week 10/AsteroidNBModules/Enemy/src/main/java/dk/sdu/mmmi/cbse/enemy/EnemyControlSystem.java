@@ -16,6 +16,14 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import java.util.Random;
+import org.openide.util.lookup.ServiceProvider;
+import org.openide.util.lookup.ServiceProviders;
+
+@ServiceProviders(value = {
+    @ServiceProvider(service = IEntityProcessingService.class)
+    , 
+    @ServiceProvider(service = IGamePluginService.class)}
+)
 
 /**
  *
@@ -78,11 +86,11 @@ public class EnemyControlSystem implements IEntityProcessingService, IGamePlugin
     public void start(GameData gameData, World world) {
         
         // Add entities to the world
-        enemy = createPlayerShip(gameData);
+        enemy = createEnemyShip(gameData);
         world.addEntity(enemy);
     }
 
-    private Entity createPlayerShip(GameData gameData) {
+    private Entity createEnemyShip(GameData gameData) {
 
         float deacceleration = 10;
         float acceleration = 200;
@@ -92,11 +100,11 @@ public class EnemyControlSystem implements IEntityProcessingService, IGamePlugin
         float y = gameData.getDisplayHeight() / 2;
         float radians = 3.1415f / 2;
         
-        Entity playerShip = new Enemy();
-        playerShip.add(new MovingPart(deacceleration, acceleration, maxSpeed, rotationSpeed));
-        playerShip.add(new PositionPart(x, y, radians));
+        Entity enemyShip = new Enemy();
+        enemyShip.add(new MovingPart(deacceleration, acceleration, maxSpeed, rotationSpeed));
+        enemyShip.add(new PositionPart(x, y, radians));
         
-        return playerShip;
+        return enemyShip;
     }
 
     @Override

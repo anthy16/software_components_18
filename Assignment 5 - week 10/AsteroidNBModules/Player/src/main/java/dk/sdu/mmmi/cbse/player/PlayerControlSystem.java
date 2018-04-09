@@ -4,12 +4,15 @@ import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.LEFT;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.RIGHT;
+import static dk.sdu.mmmi.cbse.common.data.GameKeys.SPACE;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.UP;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
+import dk.sdu.mmmi.cbse.commonbullet.BulletSPI;
+import org.openide.util.Lookup;
 //import static java.lang.Math.cos;
 //import static java.lang.Math.sin;
 //import static java.lang.Math.sqrt;
@@ -29,6 +32,9 @@ import org.openide.util.lookup.ServiceProviders;
  * @author jcs
  */
 public class PlayerControlSystem implements IEntityProcessingService, IGamePluginService {
+    private BulletSPI bulletService;
+    private float CD;
+    private boolean canShoot = true;
 
     private Entity player;
     
@@ -43,11 +49,30 @@ public class PlayerControlSystem implements IEntityProcessingService, IGamePlugi
             movingPart.setRight(gameData.getKeys().isDown(RIGHT));
             movingPart.setUp(gameData.getKeys().isDown(UP));
             
+            //Shoot
+            this.weaponCD(gameData);
+            if (gameData.getKeys().isDown(SPACE) && canShoot) {
+                if (bulletService != null) {
+                    bulletService = Lookup.getDefault().lookup(BulletSPI.class);
+                    Entity bullet = bulletService.createBullet(player, gameData);
+                    world.addEntity(bullet);
+                    canShoot = false;
+                    CD = 0.3f;
+                }
+            }
             
             movingPart.process(gameData, player);
             positionPart.process(gameData, player);
 
             updateShape(player);
+        }
+    }
+    
+    private void weaponCD(GameData gameData) {
+        if (CD > 0) {
+            CD -= gameData.getDelta();
+        } else {
+            canShoot = true;
         }
     }
 
