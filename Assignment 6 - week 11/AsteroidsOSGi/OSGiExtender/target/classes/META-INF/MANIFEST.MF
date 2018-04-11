@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 OpenIDE-Module-Specification-Version: 1.0
-OpenIDE-Module-Implementation-Version: 1.0-20180407
-OpenIDE-Module-Build-Version: 201804071041
+OpenIDE-Module-Implementation-Version: 1.0-20180410
+OpenIDE-Module-Build-Version: 201804101712
 OpenIDE-Module: dk.sdu.mmmi.cbse.OSGiExtender
 OpenIDE-Module-Public-Packages: -
 OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
@@ -15,5 +15,6 @@ OpenIDE-Module-Module-Dependencies: org.eclipse.osgi.services > 3.2.10
  1.0.0, dk.sdu.mmmi.cbse.OSGiAsteroids > 1.0.0, dk.sdu.mmmi.cbse.OSGiA
  steroidSplitter > 1.0.0, dk.sdu.mmmi.cbse.OSGiCore > 1.0.0, dk.sdu.mm
  mi.cbse.OSGiCommonPlayer > 1.0.0, dk.sdu.mmmi.cbse.OSGiPlayer > 1.0.0
- , dk.sdu.mmmi.cbse.OSGiCollision > 1.0.0
+ , dk.sdu.mmmi.cbse.OSGiCollision > 1.0.0, dk.sdu.mmmi.cbse.OSGiUpdate
+ r > 1.0.0
 

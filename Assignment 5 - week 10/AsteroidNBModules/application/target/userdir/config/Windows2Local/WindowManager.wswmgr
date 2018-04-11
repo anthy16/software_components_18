@@ -40,6 +40,6 @@
   </constraints>
   <bounds x="601" y="282" width="766" height="517" />
     </editor-area>
-    <screen width="1824" height="1216"/>
+    <screen width="1920" height="1080"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
 </windowmanager>

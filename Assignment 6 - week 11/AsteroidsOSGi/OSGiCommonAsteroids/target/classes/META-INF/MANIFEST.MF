@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1523097665655
+Bnd-LastModified: 1523380318888
 Build-Jdk: 1.8.0_101
 Built-By: AKT
 Bundle-ManifestVersion: 2
@@ -7,8 +7,8 @@ Bundle-Name: OSGiCommonAsteroids
 Bundle-SymbolicName: dk.sdu.mmmi.cbse.OSGiCommonAsteroids
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: dk.sdu.mmmi.cbse.common.asteroids;uses:="dk.sdu.mmmi.cbs
- e.common.data";version="1.0.0"
+Export-Package: dk.sdu.mmmi.cbse.common.asteroids;version="1.0.0";uses:=
+ "dk.sdu.mmmi.cbse.common.data"
 Import-Package: dk.sdu.mmmi.cbse.common.data;version="[1.0,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-3.3.0.201609221906
