@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1523380334071
+Bnd-LastModified: 1523622199456
 Build-Jdk: 1.8.0_101
 Built-By: AKT
 Bundle-ActivationPolicy: lazy
@@ -8,9 +8,9 @@ Bundle-Name: OSGiPlayer
 Bundle-SymbolicName: dk.sdu.mmmi.cbse.OSGiPlayer
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: dk.sdu.mmmi.cbse.osgiplayer;version="1.0.0";uses:="dk.sd
- u.mmmi.cbse.common.bullet,dk.sdu.mmmi.cbse.common.data,dk.sdu.mmmi.cbse
- .common.services"
+Export-Package: dk.sdu.mmmi.cbse.osgiplayer;uses:="dk.sdu.mmmi.cbse.comm
+ on.bullet,dk.sdu.mmmi.cbse.common.data,dk.sdu.mmmi.cbse.common.services
+ ";version="1.0.0"
 Import-Package: dk.sdu.mmmi.cbse.common.bullet;version="[1.0,2)",dk.sdu.
  mmmi.cbse.common.data;version="[1.0,2)",dk.sdu.mmmi.cbse.common.data.en
  tityparts;version="[1.0,2)",dk.sdu.mmmi.cbse.common.services;version="[

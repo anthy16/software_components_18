@@ -44,7 +44,7 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Export-Package >dk.sdu.mmmi.cbse.osgiasteroidsplitter</Export-Package>
+                        <Bundle-Activator>dk.sdu.mmmi.cbse.osgiasteroidsplitter.impl.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

@@ -13,7 +13,8 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 public class EnemyProcessor implements IEntityProcessingService {
 
     private BulletSPI bulletService;
-
+    
+    
 
     @Override
     public void process(GameData gameData, World world) {
@@ -29,7 +30,7 @@ public class EnemyProcessor implements IEntityProcessingService {
             movingPart.setRight(random > 0.3 && random < 0.5);
             movingPart.setUp(random > 0.7 && random < 0.9);
             
-            if (random > 0.98) {
+            if (random > 0.98 && bulletService != null) {
                 Entity bullet = bulletService.createBullet(entity, gameData);
                 world.addEntity(bullet);
             }

@@ -41,7 +41,7 @@ public class AsteroidProcessor implements IEntityProcessingService {
             
 
             // Split event
-            if (lifePart.isHit()) {
+            if (lifePart.isHit() && asteroidSplitter != null) {
                 asteroidSplitter.createSplitAsteroid(asteroid, world);
             }
             setShape(asteroid, numPoints);

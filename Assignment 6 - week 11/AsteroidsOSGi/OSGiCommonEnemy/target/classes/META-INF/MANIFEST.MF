@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1523380316584
+Bnd-LastModified: 1523622182985
 Build-Jdk: 1.8.0_101
 Built-By: AKT
 Bundle-ManifestVersion: 2
@@ -7,8 +7,8 @@ Bundle-Name: OSGiCommonEnemy
 Bundle-SymbolicName: dk.sdu.mmmi.cbse.OSGiCommonEnemy
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: dk.sdu.mmmi.cbse.common.enemy;version="1.0.0";uses:="dk.
- sdu.mmmi.cbse.common.data"
+Export-Package: dk.sdu.mmmi.cbse.common.enemy;uses:="dk.sdu.mmmi.cbse.co
+ mmon.data";version="1.0.0"
 Import-Package: dk.sdu.mmmi.cbse.common.data;version="[1.0,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-3.3.0.201609221906
