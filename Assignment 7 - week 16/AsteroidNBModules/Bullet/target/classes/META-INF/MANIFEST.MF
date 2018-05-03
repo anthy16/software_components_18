@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Install: dk/sdu/mmmi/cbse/bullet/Installer.class
+OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/bullet/Bundle.prope
+ rties
+OpenIDE-Module-Specification-Version: 1.0.1
+OpenIDE-Module-Implementation-Version: 1.0.1-20180419
+OpenIDE-Module-Build-Version: 201804190959
+OpenIDE-Module: dk.sdu.mmmi.cbse.Bullet
+OpenIDE-Module-Public-Packages: -
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
+OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
+OpenIDE-Module-Name: Bullet
+OpenIDE-Module-Short-Description: <undefined>
+OpenIDE-Module-Long-Description: <undefined>
+X-Class-Path: ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-c
+ ontext.jar ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-aop
+ .jar ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-beans.jar
+  ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-core.jar ext/
+ dk.sdu.mmmi.cbse.Bullet/commons-logging/commons-logging.jar ext/dk.sd
+ u.mmmi.cbse.Bullet/org-springframework/spring-expression.jar
+Maven-Class-Path: org.springframework:spring-context:4.3.12.RELEASE or
+ g.springframework:spring-aop:4.3.12.RELEASE org.springframework:sprin
+ g-beans:4.3.12.RELEASE org.springframework:spring-core:4.3.12.RELEASE
+  commons-logging:commons-logging:1.2 org.springframework:spring-expre
+ ssion:4.3.12.RELEASE
+OpenIDE-Module-Module-Dependencies: org.netbeans.api.annotations.commo
+ n/1 > 1.27.1, org.openide.modules > 7.48.1, org.openide.util.ui > 9.6
+ .1, dk.sdu.mmmi.cbse.CommonBullet > 1.0.1, dk.sdu.mmmi.cbse.Common > 
+ 1.0.1
+

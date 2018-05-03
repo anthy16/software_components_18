@@ -1,4 +1,4 @@
-#Fri Apr 13 14:34:36 CEST 2018
+#Sun Apr 15 15:55:46 CEST 2018
 dk.sdu.mmmi.cbse.OSGiCommonEnemy.OpenIDE-Module-Install=\u0000
 com.diffplug.osgi.extension.sun.reflect.OpenIDE-Module-Deprecated=\u0000
 org.netbeans.libs.osgi.OpenIDE-Module-Install=\u0000
@@ -79,9 +79,9 @@ org.eclipse.equinox.ds.OpenIDE-Module-Description=\u0000
 org.netbeans.modules.netbinox.OpenIDE-Module-Hide-Classpath-Packages=org.eclipse.core.runtime.**,org.eclipse.osgi.**
 dk.sdu.mmmi.cbse.OSGiExtender.OpenIDE-Module-Description=\u0000
 com.diffplug.osgi.extension.sun.reflect.OpenIDE-Module-Hide-Classpath-Packages=\u0000
-org.netbeans.bootstrap.AutoUpdate-Show-In-Client=false
 dk.sdu.mmmi.cbse.OSGiCommon.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 org.openide.util.OpenIDE-Module-Layer=\u0000
+org.netbeans.bootstrap.AutoUpdate-Show-In-Client=false
 org.openide.filesystems.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 org.netbeans.core.startup.base.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 com.diffplug.osgi.extension.sun.reflect.OpenIDE-Module-Description=\u0000

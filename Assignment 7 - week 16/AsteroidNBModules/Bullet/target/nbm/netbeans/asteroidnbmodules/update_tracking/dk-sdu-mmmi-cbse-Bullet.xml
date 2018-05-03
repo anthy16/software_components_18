@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Bullet">
+    <module_version install_time="1524131987722" last="true" origin="installer" specification_version="1.0.1">
+        <file crc="1703511565" name="config/Modules/dk-sdu-mmmi-cbse-Bullet.xml"/>
+        <file crc="3168548023" name="modules/dk-sdu-mmmi-cbse-Bullet.jar"/>
+        <file crc="908197187" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/commons-logging/commons-logging.jar"/>
+        <file crc="2479681065" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-aop.jar"/>
+        <file crc="3580994055" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-beans.jar"/>
+        <file crc="1358529146" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-context.jar"/>
+        <file crc="2624597" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-core.jar"/>
+        <file crc="1682509053" name="modules/ext/dk.sdu.mmmi.cbse.Bullet/org-springframework/spring-expression.jar"/>
+    </module_version>
+</module>

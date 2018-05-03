@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Friday, April 13, 2018 2:27:12 PM CEST
+>Log Session: Friday, April 13, 2018 2:34:17 PM CEST
 >System Info: 
   Product Version         = NetBeans Platform 8.2 (Build 201609300101)
   Operating System        = Windows 10 version 10.0 running on amd64
@@ -50,53 +50,13 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	com.diffplug.osgi.extension.sun.reflect [0.0.0 0.0.0]
 	com.diffplug.osgi.extension.sun.misc [0.0.0 0.0.0]
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 started
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiPlayer@1.0.0.SNAPSHOT resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiPlayer@1.0.0.SNAPSHOT started
 INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroidSplitter@1.0.0.SNAPSHOT resolved
-INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroidSplitter@1.0.0.SNAPSHOT 256
-INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroidSplitter@1.0.0.SNAPSHOT stopped
-org.osgi.framework.BundleException: The activator Activator for bundle dk.sdu.mmmi.cbse.OSGiAsteroidSplitter is invalid
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadBundleActivator(AbstractBundle.java:172)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:679)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:292)
-	at dk.sdu.mmmi.cbse.osgiupdater.Updater.start(Updater.java:115)
-	at dk.sdu.mmmi.cbse.osgiupdater.Updater.access$100(Updater.java:18)
-	at dk.sdu.mmmi.cbse.osgiupdater.Updater$1.created(Updater.java:39)
-	at dk.sdu.mmmi.cbse.osgiupdater.utilities.FileWatcher.poll(FileWatcher.java:95)
-	at dk.sdu.mmmi.cbse.osgiupdater.Updater$2.run(Updater.java:76)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.NoClassDefFoundError: org/osgi/framework/BundleActivator
-	at java.lang.ClassLoader.defineClass1(Native Method)
-	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.defineClass(DefaultClassLoader.java:188)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClassHoldingLock(ClasspathManager.java:638)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClass(ClasspathManager.java:613)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:574)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:492)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:465)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at org.netbeans.modules.netbinox.NetbinoxLoader.loadClass(NetbinoxLoader.java:81)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadBundleActivator(AbstractBundle.java:165)
-	... 16 more
-Caused by: java.lang.ClassNotFoundException: org.osgi.framework.BundleActivator cannot be found by dk.sdu.mmmi.cbse.OSGiAsteroidSplitter_1.0.0.SNAPSHOT
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at org.netbeans.modules.netbinox.NetbinoxLoader.loadClass(NetbinoxLoader.java:81)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 35 more
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroidSplitter@1.0.0.SNAPSHOT started
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiBullet@1.0.0.SNAPSHOT resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiBullet@1.0.0.SNAPSHOT started
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiCollision@1.0.0.SNAPSHOT resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiCollision@1.0.0.SNAPSHOT started
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroids@1.0.0.SNAPSHOT resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle dk.sdu.mmmi.cbse.OSGiAsteroids@1.0.0.SNAPSHOT started
